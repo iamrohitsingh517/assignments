@@ -5,6 +5,12 @@
 */
 
 function isAnagram(str1, str2) {
+  / Remove spaces and convert strings to lowercase
+    str1 = str1.replace(/\s/g, '').toLowerCase();
+    str2 = str2.replace(/\s/g, '').toLowerCase();
+  
+    // Check if the sorted strings are equal
+    return str1.split('').sort().join('') === str2.split('').sort().join('');
 
 }
 
